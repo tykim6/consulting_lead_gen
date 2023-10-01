@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/output.css">
     <style>
-        .my-hover-button:hover {
-            transform: scale(0.975);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        /* Mobile-first approach */
         /* Mobile-first approach */
         .my-hover-button {
             padding: 10px 20px;
             white-space: nowrap;
+            max-width: 90%;
+            /* Limit maximum width */
+            display: inline-block;
+            /* Make sure text is centered when max-width is applied */
         }
 
         /* Small screens */
         @media (min-width: 640px) {
             .my-hover-button {
                 padding: 12px 24px;
+                max-width: none;
+                /* Remove the max-width limitation */
             }
         }
 
@@ -39,6 +39,7 @@
             }
         }
 
+        /* Add padding to container for mobile */
         .button-container {
             padding: 0 20px;
         }
